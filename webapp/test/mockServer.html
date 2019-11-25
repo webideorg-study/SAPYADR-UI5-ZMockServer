@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mock Server Test</title>
+	<script
+	    id="sap-ui-bootstrap"
+	    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m"
+	    data-sap-ui-theme="sap_belize"
+		data-sap-ui-xx-bindingSyntax="complex"
+		data-sap-ui-resourceroots='{
+			"ZMockServer": "../"
+		}'
+		data-sap-ui-oninit="module:ZMockServer/test/initMockServer"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true">
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+	<div data-sap-ui-component data-name="ZMockServer" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns="sap.m"
+	controllerName="ZMockServer.controller.View1" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<t:Table id= "tab" editable="false" rows="{/UserSet}" selectionMode="sap.ui.table.SelectionMode.Single" selectionBehavior="sap.ui.table.SelectionBehavior.RowOnly" rowSelectionChange="getRowSelection">
+						<t:toolbar>
+							<Toolbar>
+								<Button text="Create User" press="userCreate"/>
+								<Button text="Update User" press="userUpdate"/>
+								<Button text="Delete User" press="userDelete"/>
+							</Toolbar>
+						</t:toolbar>
+						<t:columns editable="false" sortProperty="Email">
+							<t:Column>
+								<Label text="{test2>/Field1}"/>
+								<t:template>
+									<Text text="{Email}"/>
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="{test2>/Field2}"/>
+								<t:template>
+									<Text text="{Firstname}"/>
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="{test2>/Field3}"/>
+								<t:template>
+									<Text text="{Lastname}"/>
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="{test2>/Field4}"/>
+								<t:template>
+									<Text text="{Age}"/>
+								</t:template>
+							</t:Column>
+							<t:Column>
+								<Label text="{test2>/Field5}"/>
+								<t:template>
+									<Text text="{Address}"/>
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
