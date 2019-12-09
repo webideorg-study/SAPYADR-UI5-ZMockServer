@@ -128,6 +128,16 @@ sap.ui.define([
 
 		userSubmit: function(oEvent) {
 
+			function fnSuccess_in(oData, oResponse) {
+				sap.m.MessageToast.show("Successful");
+				console.log("Response", oResponse);
+			}
+
+			function fnError_in(oError) {
+				sap.m.MessageToast.show("Failure");
+				console.log("Error", oError);
+			}
+
 			var dialogUser = sap.ui.getCore().byId("dialogUser");
 			var comp = dialogUser.getContent()[0].getContent();
 
@@ -166,8 +176,8 @@ sap.ui.define([
 
 			} else {
 				userModel.update("/UserSet('" + this.oEntry.Email + "')", this.oEntry, {
-					success: this.fnSuccess,
-					error: this.fnError
+					success: fnSuccess_in,
+					error: fnError_in
 				});
 			}
 
